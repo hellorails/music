@@ -15,6 +15,8 @@ ActiveRecord::Schema.define(:version => 20120222090435) do
   create_table "users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name",           :default => "", :null => false
+    t.string   "hashed_pasword", :default => "", :null => false
   end
 
 end
