@@ -1,6 +1,7 @@
 class AdminController < ApplicationController
+  layout 'application'
   def login
-    asdfds
+    
   end
   def show
     asdf
