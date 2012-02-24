@@ -1,119 +1,147 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Music Store</title>
-<link href="css/styles.css" rel="stylesheet" type="text/css" />
-<%= stylesheet_link_tag "styles.css" %>
+<title>HotWebsiteTemplates.net</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="style.css" rel="stylesheet" type="text/css" />
+<!-- CuFon: Enables smooth pretty custom font rendering. 100% SEO friendly. To disable, remove this section -->
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/arial.js"></script>
+<script type="text/javascript" src="js/cuf_run.js"></script>
+<%= stylesheet_link_tag :all,'style' %>
+  <%= javascript_include_tag :defaults,'cufon-yui.js','arial.js', 'cuf_run.js','jquery.js' %>
+  <%= csrf_meta_tag %>
+<!-- CuFon ends -->
+
+<script src="js/jquery.js" type="text/javascript"></script>
 </head>
-
 <body>
-
-<div id="header">
-
-<div id="logo"><a href="#"><%= image_tag("images/logo.jpg",:width => "262" , :height=>"55") %>
-<!--	<img src="images/images/logo.jpg" title="Music Store" alt="Music Store" width="262" height="55" border="0" /></a> --></div>
-<DIV STYLE="font-family: Arial Black;font-size: 18px; color: white" align ="right">	<%= link_to("Logout" , :action => "logout", :controller => "admin") %></div>
-
-<ul class="cart">
-<li><span>Shopping Cart:</span> <%= number_to_currency(@cart_price || 0) %></li>
-
-</ul>
-
-<ul class="lang">
-<li>Language:</li>
-<li class="english"><a href="#">english</a></li>
-<li class="german"><a href="#">german</a></li>
-<li class="spanish"><a href="#">spanish</a></li>
-</ul>
-
-<ul class="currency">
-<li class="currency_headline">Currencies</li>
-<li class="listmenu"><form action="" method="get"><select name="currency">
-  <option>US Dollar</option>
-  <option>Euro</option>
-</select></form></li>
-</ul>
-
-<ul class="menu">
-<li class="home"><a href="#" title="Home Page">Home</a></li>
-<li class="line"></li>
-<li class="new"><%= link_to("Manage Users" , :action => "menu", :controller => "admin") %>New</a></li>
-<li class="line"></li>
-<li class="specials"><a href="#" title="Specials">specials</a></li>
-<li class="line"></li>
-<li class="account"><a href="#" title="My Account">Account</a></li>
-<li class="line"></li>
-<li class="contact"><a href="#" title="Contact Us">Contacts</a></li>
-</ul>
-</div>
-
-<div id="content">
-
-<div id="leftPan">
-
-<div id="categories">
-
-<h2></h2>
-
-<ul>
-
-<li><%= link_to("Manage Albums" , :action => "index", :controller => "albums") %></li>
-<li><%= link_to("Manage Artists" , :action => "index", :controller => "artists") %></li>
-<li><%= link_to("Manage Features" , :action => "index", :controller => "features") %></li>
-<li><%= link_to("Manage Orders" , :action => "index", :controller => "orders") %></li>
-<li><%= link_to("Manage Customers" , :action => "index", :controller => "customers") %></li>
-<li><%= link_to("Manage Users" , :action => "index", :controller => "users") %></li>
-<li><%= link_to("Manage public Users" , :action => "list", :controller => "public	") %></li>
-<li><a href="#">New Releses</a></li>
-<li><a href="#">Dance</a></li>
-<li><a href="#">Heavy Metal</a></li>
-<li><a href="#">International</a></li>
-<li><a href="#">Jazz</a></li>
-<li><a href="#">Latin</a></li>
-<li><a href="#">Live Performance</a></li>
-<li><a href="#">Oldies</a></li>
-<li><a href="#">R &amp; B</a></li>
-<li><a href="#">Rap/Hip Hop</a></li>
-<li><a href="#">Rock/Pop</a></li>
-<li><a href="#">Soundtrack</a></li>
-</ul>
-</div>
-</div>
-<div id="middlePan"><%= flash[:notice] %>
-	<%= yield %>
-</div>
-<%#= raise @page_tittle.inspect %>
-<% if   @page_tittle == "Home"  %>
-
-<div id="rightPan">
-
-<div id="new">
-<h2></h2>
-<img src="images/img_new.jpg" alt="" width="60" height="60" />
-<p><a href="#">Dolores et ea consetetur sadi</a><br /> 
-  pscing elit pscing elitr, sed diam consetetur sadi </p>
-
-<div id="addprice">
-<ul>
-<li class="newprice"><img src="images/price_new.jpg" alt="" width="50" height="17" /></li>
-</ul>
-</div>
-
-<div class="clear"></div>
-
-</div>
-
-<div id="advertisment"><a href="#"><img src="/images/images/ad.jpg" alt="Click Here" width="176" height="273" border="0" /></a></div>
-</div>
-<% end %>
-<div class="clear"></div>
-</div>
-
-<div id="footer">
-<img src="images/cards.jpg" alt="" width="141" height="20" />
-<p><a href="#">HOME</a> | <a href="#">ABOUT US</a> | <a href="#">SERVICES</a> | <a href="#">PRODUCTS</a> | <a href="#">SUPPORT INFO</a> | <a href="#">NEWS &amp; EVENTS</a> | <a href="#">CONTACTS</a><br/>
-Copyright &copy; Your Company Name. Designed by </a>.</p>
+<div class="main">
+  <div class="header">
+    <div class="header_resize">
+      <div class="logo"><h1><a href="index.html"><span>We make</span> sure<small>Lorem ipsum dolor sit amet</small></a></h1></div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html" class="active"><span>Home</span></a></li>
+          <li><a href="services.html"><span>Services</span></a></li>
+          <li><a href="about.html"><span>About Us</span></a></li>
+          <li><a href="contact.html"><span>Contact Us</span></a></li>
+        </ul>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="headert_text_resize">
+      <div class="textarea">
+        <h2>Template License</h2>
+        <p>This is a free CSS website template by <a href="http://www.hotwebsitetemplates.net/" title="Website Templates">HotWebsiteTemplates.net</a>. This 
+work is distributed under the <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, 
+which means that you are free to use it for any personal or commercial purpose provided you credit me in the form of a link back to <a href="http://www.hotwebsitetemplates.net/" title="Website Templates">HotWebsiteTemplates.net</a>.</p>
+        <a href="#"><img src="../images/images/read_more.gif" alt="img" width="103" height="31" border="0" /></a></div>
+      <img src="../images/images/header_text_img.jpg" alt="img" width="438" height="279" />
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="body">
+    <div class="body_resize">
+      <div class="left">
+        <h3>Welcome</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
+          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
+        <a href="#"><img src="../images/images/reading.gif" alt="img" width="125" height="31" border="0" /></a>
+        <div class="clr"></div>
+        <p>&nbsp;</p>
+        <div class="bg"></div>
+        <h3><span>Lorem Ipsum</span> Dolor Sit Amet</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
+          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
+        <a href="#"><img src="../images/images/reading.gif" alt="img" width="125" height="31" border="0" /></a>
+        <div class="clr"></div>
+        <p>&nbsp;</p>
+        <div class="bg"></div>
+        <h3><span>Contrary to</span> popular belief</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
+          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
+        <a href="#"><img src="../images/images/reading.gif" alt="" width="125" height="31" border="0"  /></a></div>
+      <div class="right">
+        <h2><span>Sidebar</span> Menu</h2>
+        <ul>
+          <li><a href="#"> Home</a></li>
+          <li><a href="#">TemplateInfo</a></li>
+          <li><a href="#">Style Demo</a></li>
+          <li> <a href="#">Blog</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="http://www.dreamtemplate.com" title="Website Templates">Web Templates</a></li>
+        </ul>
+        <div class="clr"></div>
+        <p>&nbsp;</p>
+        <h2><span>Sponsors</span></h2>
+        <ul class="sponsors">
+            <li class="sponsors"><a href="http://www.dreamtemplate.com" title="Website Templates">DreamTemplate</a><br />Over 6,000+ Premium Web Templates</li>
+            <li class="sponsors"><a href="http://www.templatesold.com" title="WordPress Themes">TemplateSOLD</a><br />Premium WordPress &amp; Joomla Themes</li>
+            <li class="sponsors"><a href="http://www.imhosted.com" title="Affordable Hosting">ImHosted.com</a><br />Affordable Web Hosting Provider</li>
+            <li class="sponsors"><a href="http://www.freethemelayouts.com" title="Free WordPress Themes">FreeThemeLayouts</a><br />Free WordPress Themes</li>
+            <li class="sponsors"><a href="http://www.evrsoft.com" title="Website Builder">Evrsoft</a><br />Website Builder Software &amp; Tools</li>
+            <li class="sponsors"><a href="http://www.myvectorstore.com" title="Stock Icons">MyVectorStore</a><br />Royalty Free Stock Icons</li>
+        </ul>
+        <div class="clr"></div>
+        <p>&nbsp;</p>
+        <h2><span>Search</span></h2>
+        <div class="search">
+          <form id="form1" name="form1" method="post" action="">
+            <span>
+            <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="Search..." />
+            </span>
+            <input name="b" type="image" src="../images/images/search.gif" class="button" />
+          </form>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="FBG">
+    <div class="FBG_resize">
+      <div class="blok">
+        <h2><span>About</span></h2>
+        <img src="../images/images/fbg_1.jpg" alt="img" width="68" height="68" />
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam,  lectus turpis varius lorem, eu  turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing urna.</p>
+        <p><a href="#">Learn more...</a><br />
+        </p>
+      </div>
+      <div class="blok">
+        <h2><span>Lorem</span> Ipsum</h2>
+        <p><strong>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</strong> Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. <br />
+          Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+        <ul>
+          <li><a href="#">• consequat molestie</a></li>
+          <li><a href="#">• sem justo</a></li>
+          <li><a href="#">• semper</a></li>
+          <li><a href="#">• magna sed purus</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">• sem justo</a></li>
+          <li><a href="#">• semper</a></li>
+          <li><a href="#">• magna sed purus</a></li>
+          <li><a href="#">• consequat molestie</a></li>
+        </ul>
+      </div>
+      <div class="blok">
+        <h2><span>Image</span> Gallery</h2>
+        <img src="../images/images/banner_1.jpg" alt="img" width="68" height="68" /><img src="../images/images/banner_2.jpg" alt="img" width="68" height="68" /><img src="../images/images/banner_3.jpg" alt="img" width="68" height="68" /><img src="../images/images/banner_4.jpg" alt="img" width="68" height="68" /><img src="../images/images/banner_5.jpg" alt="img" width="68" height="68" /><img src="../images/images/banner_6.jpg" alt="img" width="68" height="68" />
+        <div class="clr"></div>
+        <h2>Lorem ipsum </h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. </p>
+      </div>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer_resize">
+      <p>© Copyright MyWebSite. Designed by Hot <a href="http://www.hotwebsitetemplates.net">Website Templates</a></p>
+    </div>
+    <div class="clr"></div>
+  </div>
 </div>
 </body>
 </html>

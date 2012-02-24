@@ -1,7 +1,12 @@
 Music::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-   resources :admin
+   # Sample resource route with options:
+    resources :admin do
+      collection do
+        get 'login'
+      end
+    end
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
