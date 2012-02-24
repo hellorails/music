@@ -8,6 +8,6 @@ class AdminController < ApplicationController
   def login
   end
   def show
-    asdf
+   
   end
 end
