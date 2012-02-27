@@ -24,8 +24,8 @@
         <ul>
           <li><a href="index.html" class="active"><span>Home</span></a></li>
           <li><a href="services.html"><span>Services</span></a></li>
-          <li><a href="about.html"><span>About Us</span></a></li>
-          <li><a href="contact.html"><span>Contact Us</span></a></li>
+          <li><%= link_to 'About Us',admin_index_path%></span></a></li>
+          <li><%= link_to 'Contact Us',admin_contact_path %> </span></a></li>
         </ul>
       </div>
       <div class="clr"></div>
@@ -44,24 +44,9 @@ which means that you are free to use it for any personal or commercial purpose p
   <div class="body">
     <div class="body_resize">
       <div class="left">
-        <h3>Welcome</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
-          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
-        <a href="#"><img src="../images/images/reading.gif" alt="img" width="125" height="31" border="0" /></a>
-        <div class="clr"></div>
-        <p>&nbsp;</p>
-        <div class="bg"></div>
-        <h3><span>Lorem Ipsum</span> Dolor Sit Amet</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
-          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
-        <a href="#"><img src="../images/images/reading.gif" alt="img" width="125" height="31" border="0" /></a>
-        <div class="clr"></div>
-        <p>&nbsp;</p>
-        <div class="bg"></div>
-        <h3><span>Contrary to</span> popular belief</h3>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <br />
-          Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id u</p>
-        <a href="#"><img src="../images/images/reading.gif" alt="" width="125" height="31" border="0"  /></a></div>
+ 
+        <%=yield%>
+       </div>
       <div class="right">
         <h2><span>Vist</span> Menu</h2>
         <ul>

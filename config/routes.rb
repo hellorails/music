@@ -1,10 +1,23 @@
 Music::Application.routes.draw do
+  get "admin/index"
+
+  get "admin/menu"
+
+  get "admin/login"
+
+  get "admin/send_login"
+
+  get "admin/logout"
+
+  get "admin/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
    # Sample resource route with options:
     resources :admin do
       collection do
-        get 'login'
+        get :index
+        
       end
     end
   # Sample of regular route:

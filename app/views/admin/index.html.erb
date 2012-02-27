@@ -1,0 +1,7 @@
+
+
+<%= form_tag :action=>'create' do%>
+	<%= radio_button :contactmethod,:gender, 'male', :checked => true %> Male
+    <%= radio_button :contactmethod,:gender, 'Female' %> Female
+    <%= submit_tag 'create'%>
+<%end%>
