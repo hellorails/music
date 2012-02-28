@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Music Store</title>
 <link href="css/styles.css" rel="stylesheet" type="text/css" />
-<%= stylesheet_link_tag "styles.css" %>
+<%= stylesheet_link_tag "styles.css"%>
+<%=javascript_include_tag 'jquery.js','rails.js' %>
 </head>
 
 <body>
@@ -58,13 +59,13 @@
 
 <ul>
 
-<li><%= link_to("Manage Albums" , :action => "index", :controller => "albums") %></li>
-<li><%= link_to("Manage Artists" , :action => "index", :controller => "artists") %></li>
-<li><%= link_to("Manage Features" , :action => "index", :controller => "features") %></li>
-<li><%= link_to("Manage Orders" , :action => "index", :controller => "orders") %></li>
-<li><%= link_to("Manage Customers" , :action => "index", :controller => "customers") %></li>
-<li><%= link_to("Manage Users" , :action => "index", :controller => "users") %></li>
-<li><%= link_to("Manage public Users" , :action => "list", :controller => "public	") %></li>
+<li><%#= link_to("Manage Albums" , :action => "index", :controller => "albums") %></li>
+<li><%#= link_to("Manage Artists" , :action => "index", :controller => "artists") %></li>
+<li><%#= link_to("Manage Features" , :action => "index", :controller => "features") %></li>
+<li><%#= link_to("Manage Orders" , :action => "index", :controller => "orders") %></li>
+<li><%#= link_to("Manage Customers" , :action => "index", :controller => "customers") %></li>
+<li><%#= link_to("Manage Users" , :action => "index", :controller => "users") %></li>
+<li><%#= link_to("Manage public Users" , :action => "list", :controller => "public	") %></li>
 <li><a href="#">New Releses</a></li>
 <li><a href="#">Dance</a></li>
 <li><a href="#">Heavy Metal</a></li>

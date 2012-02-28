@@ -1,2 +1,19 @@
-<h1>Admin#login</h1>
-<p>Find me in app/views/admin/login.html.erb</p>
+<% form_tag :action=>'send_login',:controller=>'admin' do%>
+
+<div class="login-image" id="login-image">
+<div id="name-text"><%= text_field 'user', 'name',:size => "22x",:style=>'height: 34px;'%></div>
+<div id="name-password"><%= password_field 'user','password',:size => "22x",:style=>'height: 35px;'%></div>
+<div class="actions">  </div>
+
+</div>
+<%end%>
+
+
+<script>
+$(function() {
+  $('.actions').click(function() {
+    $('form').submit();
+  });
+});
+
+</script>

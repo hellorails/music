@@ -100,6 +100,13 @@ ul.menu li{float:left}
 /* CONTENT */
 
 #content{width:744px; position:relative; margin: 0 auto; clear:both; padding: 18px 30px 0 0px;}
+#login-image{height:290px;	background:url(../images/login.jpg)0 0 no-repeat; position:relative; padding-bottom:10px;width:600px;}
+#name-text{no-repeat; position:relative; padding-bottom:0px; position:relative; top:92px; left:175px;}
+#name-password{no-repeat; position:relative; padding-bottom:100px; position:relative; top:120px; left:175px;}
+.actions{no-repeat; position:relative; padding-bottom:100px; position:relative; top:60px; left:300px; }
+
+
+
 
 #leftPan{width:176px; position:relative; float:left; padding-right:16px;}
 
@@ -227,3 +234,5 @@ padding: 3px;
 -moz-border-radius: 3px; // Rounds the corners; Works for Mozilla only
 }
  */
+
+

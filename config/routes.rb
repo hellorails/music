@@ -5,7 +5,7 @@ Music::Application.routes.draw do
 
   get "admin/login"
 
-  get "admin/send_login"
+  post "admin/send_login"
 
   get "admin/logout"
 
@@ -17,7 +17,7 @@ Music::Application.routes.draw do
     resources :admin do
       collection do
         get :index
-        
+        get :send_login
       end
     end
   # Sample of regular route:
