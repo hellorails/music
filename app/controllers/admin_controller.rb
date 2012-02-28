@@ -8,7 +8,7 @@ class AdminController < ApplicationController
   end
 
   def login
-    @login = User.new
+  #  @login = User.new
   end
 
    def send_login
