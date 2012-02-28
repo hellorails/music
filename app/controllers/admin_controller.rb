@@ -1,5 +1,7 @@
 class AdminController < ApplicationController
   layout 'music'
+   before_filter :authorize_access , :except => [:index ,:login, :send_login]    
+  
   def index
      redirect_to :action=>'login'
   end

@@ -10,7 +10,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120222090435) do
+ActiveRecord::Schema.define(:version => 20120228083716) do
+
+  create_table "albums", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "tittle"
+    t.string   "artist"
+    t.date     "release_date"
+    t.string   "genere"
+    t.integer  "feature"
+    t.integer  "artist_id"
+    t.float    "price",          :default => 0.0
+    t.string   "image_path"
+    t.string   "hashed_pasword"
+  end
+
+  create_table "artists", :force => true do |t|
+    t.string   "name"
+    t.string   "active_users"
+    t.string   "biography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "features", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.datetime "created_at"

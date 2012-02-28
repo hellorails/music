@@ -1,4 +1,6 @@
 Music::Application.routes.draw do
+  resources :features
+
   get "admin/index"
 
   get "admin/menu"
@@ -18,6 +20,13 @@ Music::Application.routes.draw do
       collection do
         get :index
         get :send_login
+      end
+    end
+    
+    
+    resources :features do
+      collection do
+        get :index
       end
     end
   # Sample of regular route:
